@@ -5,7 +5,7 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.post("/api/send", (req, res) => {
+app.post("/send", (req, res) => {
   const { name, email, message } = req.body;
 
   const isValid = contactFormSchema.isValidSync(req.body);
